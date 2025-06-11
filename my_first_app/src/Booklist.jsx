@@ -31,10 +31,14 @@ export const Booklist = () => {
 const Book = (props) => {
   //Destructuring
   const { img, title, author } = props
+  const displayTitle = () => {
+    console.log(title)
+  }
   return (
     <article className='book'>
       <img src={img} alt={title} />
       <h2>{title}</h2>
+      <button onClick={displayTitle}>Display Title</button>
       <h4>by {author}</h4>
     </article>
   )
